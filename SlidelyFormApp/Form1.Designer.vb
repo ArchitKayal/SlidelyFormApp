@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         ButtonViewSubmissions = New Button()
         ButtonNewSubmissions = New Button()
+        Label1 = New Label()
         SuspendLayout()
         ' 
         ' ButtonViewSubmissions
@@ -44,19 +45,31 @@ Partial Class Form1
         ButtonNewSubmissions.Text = "Create New Submission (Ctrl + N)"
         ButtonNewSubmissions.UseVisualStyleBackColor = True
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(221, 131)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(371, 25)
+        Label1.TabIndex = 2
+        Label1.Text = "Archit Kayal, Slidely Task 2 - Slidely Form App"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Label1)
         Controls.Add(ButtonNewSubmissions)
         Controls.Add(ButtonViewSubmissions)
         Name = "Form1"
         Text = "Form1"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents ButtonViewSubmissions As Button
     Friend WithEvents ButtonNewSubmissions As Button
+    Friend WithEvents Label1 As Label
 
 End Class
