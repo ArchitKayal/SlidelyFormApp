@@ -7,14 +7,17 @@ Public Class CreateSubmissionForm
     Private stopwatchRunning As Boolean = False
     Private stopwatchTime As TimeSpan = TimeSpan.Zero
 
+    Public Sub New()
+        InitializeComponent()
+        Me.KeyPreview = True
+    End Sub
+
+    Private Sub CreateSubmissionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.KeyPreview = True
+    End Sub
+
     Private Sub ButtonStopwatch_Click(sender As Object, e As EventArgs) Handles ButtonStopwatch.Click
-        If stopwatchRunning Then
-            Timer1.Stop()
-            stopwatchRunning = False
-        Else
-            Timer1.Start()
-            stopwatchRunning = True
-        End If
+        ToggleStopwatch()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -52,5 +55,23 @@ Public Class CreateSubmissionForm
                 MessageBox.Show("An error occurred: " & ex.Message)
             End Try
         End Using
+    End Sub
+
+    Private Sub ToggleStopwatch()
+        If stopwatchRunning Then
+            Timer1.Stop()
+            stopwatchRunning = False
+        Else
+            Timer1.Start()
+            stopwatchRunning = True
+        End If
+    End Sub
+
+    Private Sub CreateSubmissionForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control AndAlso e.KeyCode = Keys.S Then
+            ButtonSubmit.PerformClick()
+        ElseIf e.Control AndAlso e.KeyCode = Keys.T Then
+            ToggleStopwatch()
+        End If
     End Sub
 End Class
