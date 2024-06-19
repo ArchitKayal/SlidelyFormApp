@@ -22,18 +22,20 @@ Partial Class CreateSubmissionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        Button1 = New Button()
-        TextBox5 = New TextBox()
-        Button2 = New Button()
+        LabelName = New Label()
+        LabelEmail = New Label()
+        LabelPhoneNum = New Label()
+        LabelGithub = New Label()
+        TextBoxName = New TextBox()
+        TextBoxEmail = New TextBox()
+        TextBoxPhoneNum = New TextBox()
+        TextBoxGithub = New TextBox()
+        ButtonStopwatch = New Button()
+        TextBoxStopwatch = New TextBox()
+        ButtonSubmit = New Button()
+        Timer1 = New Timer(components)
         SuspendLayout()
         ' 
         ' Label1
@@ -45,111 +47,117 @@ Partial Class CreateSubmissionForm
         Label1.TabIndex = 0
         Label1.Text = "Archit Kayal, Slidely Task 2 - Create Submission"
         ' 
-        ' Label2
+        ' LabelName
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(202, 98)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(59, 25)
-        Label2.TabIndex = 1
-        Label2.Text = "Name"
+        LabelName.AutoSize = True
+        LabelName.Location = New Point(202, 98)
+        LabelName.Name = "LabelName"
+        LabelName.Size = New Size(59, 25)
+        LabelName.TabIndex = 1
+        LabelName.Text = "Name"
         ' 
-        ' Label3
+        ' LabelEmail
         ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(202, 146)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(54, 25)
-        Label3.TabIndex = 2
-        Label3.Text = "Email"
+        LabelEmail.AutoSize = True
+        LabelEmail.Location = New Point(202, 146)
+        LabelEmail.Name = "LabelEmail"
+        LabelEmail.Size = New Size(54, 25)
+        LabelEmail.TabIndex = 2
+        LabelEmail.Text = "Email"
         ' 
-        ' Label4
+        ' LabelPhoneNum
         ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(202, 195)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(106, 25)
-        Label4.TabIndex = 3
-        Label4.Text = "Phone Num"
+        LabelPhoneNum.AutoSize = True
+        LabelPhoneNum.Location = New Point(202, 195)
+        LabelPhoneNum.Name = "LabelPhoneNum"
+        LabelPhoneNum.Size = New Size(106, 25)
+        LabelPhoneNum.TabIndex = 3
+        LabelPhoneNum.Text = "Phone Num"
         ' 
-        ' Label5
+        ' LabelGithub
         ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(202, 245)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(185, 25)
-        Label5.TabIndex = 4
-        Label5.Text = "Github Link For Task 2"
+        LabelGithub.AutoSize = True
+        LabelGithub.Location = New Point(202, 245)
+        LabelGithub.Name = "LabelGithub"
+        LabelGithub.Size = New Size(185, 25)
+        LabelGithub.TabIndex = 4
+        LabelGithub.Text = "Github Link For Task 2"
         ' 
-        ' TextBox1
+        ' TextBoxName
         ' 
-        TextBox1.Location = New Point(433, 92)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(150, 31)
-        TextBox1.TabIndex = 5
+        TextBoxName.Location = New Point(433, 92)
+        TextBoxName.Name = "TextBoxName"
+        TextBoxName.Size = New Size(150, 31)
+        TextBoxName.TabIndex = 5
         ' 
-        ' TextBox2
+        ' TextBoxEmail
         ' 
-        TextBox2.Location = New Point(433, 140)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(150, 31)
-        TextBox2.TabIndex = 6
+        TextBoxEmail.Location = New Point(433, 140)
+        TextBoxEmail.Name = "TextBoxEmail"
+        TextBoxEmail.Size = New Size(150, 31)
+        TextBoxEmail.TabIndex = 6
         ' 
-        ' TextBox3
+        ' TextBoxPhoneNum
         ' 
-        TextBox3.Location = New Point(433, 189)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(150, 31)
-        TextBox3.TabIndex = 7
+        TextBoxPhoneNum.Location = New Point(433, 189)
+        TextBoxPhoneNum.Name = "TextBoxPhoneNum"
+        TextBoxPhoneNum.Size = New Size(150, 31)
+        TextBoxPhoneNum.TabIndex = 7
         ' 
-        ' TextBox4
+        ' TextBoxGithub
         ' 
-        TextBox4.Location = New Point(433, 239)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(150, 31)
-        TextBox4.TabIndex = 8
+        TextBoxGithub.Location = New Point(433, 239)
+        TextBoxGithub.Name = "TextBoxGithub"
+        TextBoxGithub.Size = New Size(150, 31)
+        TextBoxGithub.TabIndex = 8
         ' 
-        ' Button1
+        ' ButtonStopwatch
         ' 
-        Button1.Location = New Point(202, 294)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(247, 34)
-        Button1.TabIndex = 9
-        Button1.Text = "Toggle Stopwatch (Ctrl + T)"
-        Button1.UseVisualStyleBackColor = True
+        ButtonStopwatch.Location = New Point(202, 294)
+        ButtonStopwatch.Name = "ButtonStopwatch"
+        ButtonStopwatch.Size = New Size(247, 34)
+        ButtonStopwatch.TabIndex = 9
+        ButtonStopwatch.Text = "Toggle Stopwatch (Ctrl + T)"
+        ButtonStopwatch.UseVisualStyleBackColor = True
         ' 
-        ' TextBox5
+        ' TextBoxStopwatch
         ' 
-        TextBox5.Location = New Point(461, 297)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(122, 31)
-        TextBox5.TabIndex = 10
+        TextBoxStopwatch.Location = New Point(461, 297)
+        TextBoxStopwatch.Name = "TextBoxStopwatch"
+        TextBoxStopwatch.ReadOnly = True
+        TextBoxStopwatch.Size = New Size(122, 31)
+        TextBoxStopwatch.TabIndex = 10
         ' 
-        ' Button2
+        ' ButtonSubmit
         ' 
-        Button2.Location = New Point(202, 353)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(381, 34)
-        Button2.TabIndex = 11
-        Button2.Text = "Submit (Ctrl + S)"
-        Button2.UseVisualStyleBackColor = True
+        ButtonSubmit.Location = New Point(202, 353)
+        ButtonSubmit.Name = "ButtonSubmit"
+        ButtonSubmit.Size = New Size(381, 34)
+        ButtonSubmit.TabIndex = 11
+        ButtonSubmit.Text = "Submit (Ctrl + S)"
+        ButtonSubmit.UseVisualStyleBackColor = True
+        ' 
+        ' Timer1
+        ' 
+        Timer1.Enabled = True
+        Timer1.Interval = 1000
         ' 
         ' CreateSubmissionForm
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(Button2)
-        Controls.Add(TextBox5)
-        Controls.Add(Button1)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
-        Controls.Add(Label5)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
+        Controls.Add(ButtonSubmit)
+        Controls.Add(TextBoxStopwatch)
+        Controls.Add(ButtonStopwatch)
+        Controls.Add(TextBoxGithub)
+        Controls.Add(TextBoxPhoneNum)
+        Controls.Add(TextBoxEmail)
+        Controls.Add(TextBoxName)
+        Controls.Add(LabelGithub)
+        Controls.Add(LabelPhoneNum)
+        Controls.Add(LabelEmail)
+        Controls.Add(LabelName)
         Controls.Add(Label1)
         Name = "CreateSubmissionForm"
         Text = "CreateSubmissionForm"
@@ -158,15 +166,16 @@ Partial Class CreateSubmissionForm
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents LabelName As Label
+    Friend WithEvents LabelEmail As Label
+    Friend WithEvents LabelPhoneNum As Label
+    Friend WithEvents LabelGithub As Label
+    Friend WithEvents TextBoxName As TextBox
+    Friend WithEvents TextBoxEmail As TextBox
+    Friend WithEvents TextBoxPhoneNum As TextBox
+    Friend WithEvents TextBoxGithub As TextBox
+    Friend WithEvents ButtonStopwatch As Button
+    Friend WithEvents TextBoxStopwatch As TextBox
+    Friend WithEvents ButtonSubmit As Button
+    Friend WithEvents Timer1 As Timer
 End Class

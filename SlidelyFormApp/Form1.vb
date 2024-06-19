@@ -11,4 +11,16 @@
             ButtonNewSubmissions.PerformClick()
         End If
     End Sub
+
+    Private Sub ButtonViewSubmissions_Click(sender As Object, e As EventArgs) Handles ButtonViewSubmissions.Click
+        Dim viewForm As New ViewSubmissionsForm()
+        viewForm.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonNewSubmissions_Click(sender As Object, e As EventArgs) Handles ButtonNewSubmissions.Click
+        Dim createForm As New CreateSubmissionForm()
+        createForm.Show()
+        Me.Hide()
+    End Sub
 End Class

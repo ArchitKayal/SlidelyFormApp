@@ -23,18 +23,18 @@ Partial Class ViewSubmissionsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        Label6 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox5 = New TextBox()
-        Button1 = New Button()
-        Button2 = New Button()
+        LabelName = New Label()
+        LabelEmail = New Label()
+        LabelPhoneNum = New Label()
+        LabelGithub = New Label()
+        LabelStopwatch = New Label()
+        TextBoxName = New TextBox()
+        TextBoxEmail = New TextBox()
+        TextBoxPhoneNum = New TextBox()
+        TextBoxGitHub = New TextBox()
+        TextBoxStopwatch = New TextBox()
+        ButtonPrevious = New Button()
+        ButtonNext = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -46,126 +46,126 @@ Partial Class ViewSubmissionsForm
         Label1.TabIndex = 0
         Label1.Text = "Archit Kayal, Slidely Task 2 - View Submissions"
         ' 
-        ' Label2
+        ' LabelName
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(203, 96)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(59, 25)
-        Label2.TabIndex = 1
-        Label2.Text = "Name"
+        LabelName.AutoSize = True
+        LabelName.Location = New Point(203, 96)
+        LabelName.Name = "LabelName"
+        LabelName.Size = New Size(59, 25)
+        LabelName.TabIndex = 1
+        LabelName.Text = "Name"
         ' 
-        ' Label3
+        ' LabelEmail
         ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(203, 145)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(54, 25)
-        Label3.TabIndex = 2
-        Label3.Text = "Email"
+        LabelEmail.AutoSize = True
+        LabelEmail.Location = New Point(203, 145)
+        LabelEmail.Name = "LabelEmail"
+        LabelEmail.Size = New Size(54, 25)
+        LabelEmail.TabIndex = 2
+        LabelEmail.Text = "Email"
         ' 
-        ' Label4
+        ' LabelPhoneNum
         ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(203, 197)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(106, 25)
-        Label4.TabIndex = 3
-        Label4.Text = "Phone Num"
+        LabelPhoneNum.AutoSize = True
+        LabelPhoneNum.Location = New Point(203, 197)
+        LabelPhoneNum.Name = "LabelPhoneNum"
+        LabelPhoneNum.Size = New Size(106, 25)
+        LabelPhoneNum.TabIndex = 3
+        LabelPhoneNum.Text = "Phone Num"
         ' 
-        ' Label5
+        ' LabelGithub
         ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(203, 251)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(185, 25)
-        Label5.TabIndex = 4
-        Label5.Text = "Github Link For Task 2"
+        LabelGithub.AutoSize = True
+        LabelGithub.Location = New Point(203, 251)
+        LabelGithub.Name = "LabelGithub"
+        LabelGithub.Size = New Size(185, 25)
+        LabelGithub.TabIndex = 4
+        LabelGithub.Text = "Github Link For Task 2"
         ' 
-        ' Label6
+        ' LabelStopwatch
         ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(203, 304)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(138, 25)
-        Label6.TabIndex = 5
-        Label6.Text = "Stopwatch Time"
+        LabelStopwatch.AutoSize = True
+        LabelStopwatch.Location = New Point(203, 304)
+        LabelStopwatch.Name = "LabelStopwatch"
+        LabelStopwatch.Size = New Size(138, 25)
+        LabelStopwatch.TabIndex = 5
+        LabelStopwatch.Text = "Stopwatch Time"
         ' 
-        ' TextBox1
+        ' TextBoxName
         ' 
-        TextBox1.Location = New Point(389, 93)
-        TextBox1.Name = "TextBox1"
-        TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(150, 31)
-        TextBox1.TabIndex = 6
+        TextBoxName.Location = New Point(389, 93)
+        TextBoxName.Name = "TextBoxName"
+        TextBoxName.ReadOnly = True
+        TextBoxName.Size = New Size(150, 31)
+        TextBoxName.TabIndex = 6
         ' 
-        ' TextBox2
+        ' TextBoxEmail
         ' 
-        TextBox2.Location = New Point(389, 139)
-        TextBox2.Name = "TextBox2"
-        TextBox2.ReadOnly = True
-        TextBox2.Size = New Size(150, 31)
-        TextBox2.TabIndex = 7
+        TextBoxEmail.Location = New Point(389, 139)
+        TextBoxEmail.Name = "TextBoxEmail"
+        TextBoxEmail.ReadOnly = True
+        TextBoxEmail.Size = New Size(150, 31)
+        TextBoxEmail.TabIndex = 7
         ' 
-        ' TextBox3
+        ' TextBoxPhoneNum
         ' 
-        TextBox3.Location = New Point(389, 191)
-        TextBox3.Name = "TextBox3"
-        TextBox3.ReadOnly = True
-        TextBox3.Size = New Size(150, 31)
-        TextBox3.TabIndex = 8
+        TextBoxPhoneNum.Location = New Point(389, 191)
+        TextBoxPhoneNum.Name = "TextBoxPhoneNum"
+        TextBoxPhoneNum.ReadOnly = True
+        TextBoxPhoneNum.Size = New Size(150, 31)
+        TextBoxPhoneNum.TabIndex = 8
         ' 
-        ' TextBox4
+        ' TextBoxGitHub
         ' 
-        TextBox4.Location = New Point(389, 245)
-        TextBox4.Name = "TextBox4"
-        TextBox4.ReadOnly = True
-        TextBox4.Size = New Size(150, 31)
-        TextBox4.TabIndex = 9
+        TextBoxGitHub.Location = New Point(389, 245)
+        TextBoxGitHub.Name = "TextBoxGitHub"
+        TextBoxGitHub.ReadOnly = True
+        TextBoxGitHub.Size = New Size(150, 31)
+        TextBoxGitHub.TabIndex = 9
         ' 
-        ' TextBox5
+        ' TextBoxStopwatch
         ' 
-        TextBox5.Location = New Point(389, 298)
-        TextBox5.Name = "TextBox5"
-        TextBox5.ReadOnly = True
-        TextBox5.Size = New Size(150, 31)
-        TextBox5.TabIndex = 10
+        TextBoxStopwatch.Location = New Point(389, 298)
+        TextBoxStopwatch.Name = "TextBoxStopwatch"
+        TextBoxStopwatch.ReadOnly = True
+        TextBoxStopwatch.Size = New Size(150, 31)
+        TextBoxStopwatch.TabIndex = 10
         ' 
-        ' Button1
+        ' ButtonPrevious
         ' 
-        Button1.Location = New Point(203, 363)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(163, 34)
-        Button1.TabIndex = 11
-        Button1.Text = "Previous (Ctrl + P)"
-        Button1.UseVisualStyleBackColor = True
+        ButtonPrevious.Location = New Point(203, 363)
+        ButtonPrevious.Name = "ButtonPrevious"
+        ButtonPrevious.Size = New Size(163, 34)
+        ButtonPrevious.TabIndex = 11
+        ButtonPrevious.Text = "Previous (Ctrl + P)"
+        ButtonPrevious.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' ButtonNext
         ' 
-        Button2.Location = New Point(389, 363)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(150, 34)
-        Button2.TabIndex = 12
-        Button2.Text = "Next (Ctrl + N)"
-        Button2.UseVisualStyleBackColor = True
+        ButtonNext.Location = New Point(389, 363)
+        ButtonNext.Name = "ButtonNext"
+        ButtonNext.Size = New Size(150, 34)
+        ButtonNext.TabIndex = 12
+        ButtonNext.Text = "Next (Ctrl + N)"
+        ButtonNext.UseVisualStyleBackColor = True
         ' 
         ' ViewSubmissionsForm
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(TextBox5)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
-        Controls.Add(Label6)
-        Controls.Add(Label5)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
+        Controls.Add(ButtonNext)
+        Controls.Add(ButtonPrevious)
+        Controls.Add(TextBoxStopwatch)
+        Controls.Add(TextBoxGitHub)
+        Controls.Add(TextBoxPhoneNum)
+        Controls.Add(TextBoxEmail)
+        Controls.Add(TextBoxName)
+        Controls.Add(LabelStopwatch)
+        Controls.Add(LabelGithub)
+        Controls.Add(LabelPhoneNum)
+        Controls.Add(LabelEmail)
+        Controls.Add(LabelName)
         Controls.Add(Label1)
         Name = "ViewSubmissionsForm"
         Text = "ViewSubmissionsForm"
@@ -174,16 +174,16 @@ Partial Class ViewSubmissionsForm
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents LabelName As Label
+    Friend WithEvents LabelEmail As Label
+    Friend WithEvents LabelPhoneNum As Label
+    Friend WithEvents LabelGithub As Label
+    Friend WithEvents LabelStopwatch As Label
+    Friend WithEvents TextBoxName As TextBox
+    Friend WithEvents TextBoxEmail As TextBox
+    Friend WithEvents TextBoxPhoneNum As TextBox
+    Friend WithEvents TextBoxGitHub As TextBox
+    Friend WithEvents TextBoxStopwatch As TextBox
+    Friend WithEvents ButtonPrevious As Button
+    Friend WithEvents ButtonNext As Button
 End Class
