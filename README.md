@@ -91,7 +91,15 @@ This form allows users to view, navigate, and delete submissions.
 **Navigation**:
 - Previous Submissions:
   - Button: Click the "Previous" button.
-
+  - Shortcut: Press Ctrl + P.
+  - Action: Displays the previous submission if available.
+- Next Submission:
+  - Button: Click the "Next" button.
+  - Shortcut: Press Ctrl + N.
+  - Action: Displays the next submission if available.
+- Delete Submission:
+  - Button: Click the "Delete" button.
+  - Action: Deletes the current submission and updates the view to the next available submission or indicates that there are no more submissions.
 
 <img width="402" alt="image" src="https://github.com/ArchitKayal/SlidelyFormApp/assets/59079120/adb40b8f-65e6-4356-8609-2f84915522be">
 
