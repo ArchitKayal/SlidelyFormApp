@@ -1,12 +1,12 @@
 # SlidelyFormApp
 
-SlidelyFormApp is a Windows Forms application developed in Visual Basic using Visual Studio. This application allows users to create,view and delete form submissions. The submissions include details like Name, Email, Phone Number, GitHub Repository Link, and Stopwatch Time.
+SlidelyFormApp is a Windows Forms application developed in Visual Basic using Visual Studio. This application allows users to create, view and delete form submissions. The submissions include details like Name, Email, Phone Number, GitHub Repository Link, and Stopwatch Time.
 
 ## Features
 
 - **Create New Submission**: Users can fill in the details and submit a new form.
 - **View Submissions**: Users can navigate through the submitted forms using "Previous" and "Next" buttons.
-- - **Delete Submissions**: Remove any unwanted submissions.
+- **Delete Submissions**: Remove any unwanted submissions.
 
 ## Prerequisites
 
