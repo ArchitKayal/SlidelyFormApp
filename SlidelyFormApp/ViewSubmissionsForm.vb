@@ -114,6 +114,8 @@ Public Class ViewSubmissionsForm
             ButtonPrevious.PerformClick()
         ElseIf e.Control AndAlso e.KeyCode = Keys.N Then
             ButtonNext.PerformClick()
+        ElseIf e.Control AndAlso e.KeyCode = Keys.D Then
+            ButtonDelete.PerformClick()
         End If
     End Sub
 End Class
