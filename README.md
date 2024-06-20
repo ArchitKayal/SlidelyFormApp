@@ -50,12 +50,12 @@ SlidelyFormApp is a Windows Forms application developed in Visual Basic using Vi
 
 The Main Form is the entry point of the application. It provides buttons to navigate to the Create Submission Form and the View Submissions Form.
 
-View Submissions:
+**View Submissions**:
 -Button: Click the "View Submissions" button.
 -Shortcut: Press Ctrl + V.
 -Action: Opens the View Submissions form, displaying the first submission if available.
 
-Create New Submission:
+**Create New Submission**:
 -Button: Click the "Create New Submission" button.
 -Shortcut: Press Ctrl + N.
 -Action: Opens the Create Submission form.
