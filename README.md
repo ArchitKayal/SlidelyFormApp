@@ -51,9 +51,9 @@ SlidelyFormApp is a Windows Forms application developed in Visual Basic using Vi
 The Main Form is the entry point of the application. It provides buttons to navigate to the Create Submission Form and the View Submissions Form.
 
 **View Submissions**:
--Button: Click the "View Submissions" button.
--Shortcut: Press Ctrl + V.
--Action: Opens the View Submissions form, displaying the first submission if available.
+- Button: Click the "View Submissions" button.
+- Shortcut: Press Ctrl + V.
+- Action: Opens the View Submissions form, displaying the first submission if available.
 
 **Create New Submission**:
 - Button: Click the "Create New Submission" button.
@@ -63,6 +63,24 @@ The Main Form is the entry point of the application. It provides buttons to navi
 <img width="402" alt="main form" src="https://github.com/ArchitKayal/SlidelyFormApp/assets/59079120/6ce59744-6b90-4fe6-8ef0-0c5b61bb47f2">
 
 **Create Submission Form**
+
+This form allows users to create a new submission with the following fields:
+
+**Fields**:
+- Name: TextBox for entering the name.
+- Email: TextBox for entering the email address.
+- Phone Number: TextBox for entering the phone number.
+- GitHub Repo Link: TextBox for entering the GitHub repository link.
+
+**Stopwatch**:
+- Button: Click the "Stopwatch" button to start/pause the stopwatch.
+- Shortcut: Press Ctrl + T.
+- Display: The stopwatch time is displayed in a TextBox.
+
+**Submit**:
+- Button: Click the "Submit" button to submit the form.
+- Shortcut: Press Ctrl + S.
+- Action: Submits the form data to the backend server. Shows a message box indicating success or failure.
 
 <img width="402" alt="image" src="https://github.com/ArchitKayal/SlidelyFormApp/assets/59079120/751ef560-ce30-4a7f-9658-c1d70b6f6ace">
 
