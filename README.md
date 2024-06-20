@@ -17,19 +17,45 @@ SlidelyFormApp is a Windows Forms application developed in Visual Basic using Vi
 ## Setup and Installation
 
 1. **Clone the Repository**:
+   
    ```bash
    git clone https://github.com/yourusername/SlidelyFormApp.git
    cd SlidelyFormApp
    ```
-2. **Open the Solution**:
+3. **Open the Solution**:
    - Open Visual Studio.
    - Go to File -> Open -> Project/Solution.
    - Select SlidelyFormApp.sln from the cloned repository.
-3. **Restore NuGet Packages**:
+4. **Restore NuGet Packages**:
    - Go to Tools -> NuGet Package Manager -> Package Manager Console.
    - Run the following command:
+
    ```bash
    Update-Package -reinstall
    ```
-4. **Build the Solution**:
+5. **Build the Solution**:
    -Go to Build -> Build Solution or press Ctrl + Shift + B.
+
+
+## Running the Application
+
+1. **Start the Backend Server**:
+   -Ensure the backend server is running (see backend server setup instructions in the backend's README).
+2. **Run the Application**:
+   -Press F5 or go to Debug -> Start Debugging to run the application.
+
+## User Interface
+
+**Main Form**
+
+<img width="402" alt="main form" src="https://github.com/ArchitKayal/SlidelyFormApp/assets/59079120/6ce59744-6b90-4fe6-8ef0-0c5b61bb47f2">
+
+**Create Submission Form**
+
+<img width="402" alt="image" src="https://github.com/ArchitKayal/SlidelyFormApp/assets/59079120/751ef560-ce30-4a7f-9658-c1d70b6f6ace">
+
+**View Submission Form**
+
+<img width="402" alt="image" src="https://github.com/ArchitKayal/SlidelyFormApp/assets/59079120/adb40b8f-65e6-4356-8609-2f84915522be">
+
+
