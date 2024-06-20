@@ -113,12 +113,13 @@ Partial Class CreateSubmissionForm
         ' 
         ' ButtonStopwatch
         ' 
+        ButtonStopwatch.BackColor = Color.Khaki
         ButtonStopwatch.Location = New Point(202, 294)
         ButtonStopwatch.Name = "ButtonStopwatch"
         ButtonStopwatch.Size = New Size(247, 34)
         ButtonStopwatch.TabIndex = 9
         ButtonStopwatch.Text = "Toggle Stopwatch (Ctrl + T)"
-        ButtonStopwatch.UseVisualStyleBackColor = True
+        ButtonStopwatch.UseVisualStyleBackColor = False
         ' 
         ' TextBoxStopwatch
         ' 
@@ -130,12 +131,13 @@ Partial Class CreateSubmissionForm
         ' 
         ' ButtonSubmit
         ' 
+        ButtonSubmit.BackColor = Color.PaleTurquoise
         ButtonSubmit.Location = New Point(202, 353)
         ButtonSubmit.Name = "ButtonSubmit"
         ButtonSubmit.Size = New Size(381, 34)
         ButtonSubmit.TabIndex = 11
         ButtonSubmit.Text = "Submit (Ctrl + S)"
-        ButtonSubmit.UseVisualStyleBackColor = True
+        ButtonSubmit.UseVisualStyleBackColor = False
         ' 
         ' Timer1
         ' 

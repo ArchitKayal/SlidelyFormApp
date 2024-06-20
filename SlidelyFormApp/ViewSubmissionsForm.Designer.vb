@@ -35,6 +35,7 @@ Partial Class ViewSubmissionsForm
         TextBoxStopwatch = New TextBox()
         ButtonPrevious = New Button()
         ButtonNext = New Button()
+        ButtonDelete = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -133,27 +134,40 @@ Partial Class ViewSubmissionsForm
         ' 
         ' ButtonPrevious
         ' 
-        ButtonPrevious.Location = New Point(203, 340)
+        ButtonPrevious.BackColor = Color.Khaki
+        ButtonPrevious.Location = New Point(203, 348)
         ButtonPrevious.Name = "ButtonPrevious"
-        ButtonPrevious.Size = New Size(163, 34)
+        ButtonPrevious.Size = New Size(163, 30)
         ButtonPrevious.TabIndex = 11
         ButtonPrevious.Text = "Previous (Ctrl + P)"
-        ButtonPrevious.UseVisualStyleBackColor = True
+        ButtonPrevious.UseVisualStyleBackColor = False
         ' 
         ' ButtonNext
         ' 
-        ButtonNext.Location = New Point(389, 340)
+        ButtonNext.BackColor = Color.PaleTurquoise
+        ButtonNext.Location = New Point(389, 348)
         ButtonNext.Name = "ButtonNext"
-        ButtonNext.Size = New Size(150, 34)
+        ButtonNext.Size = New Size(150, 30)
         ButtonNext.TabIndex = 12
         ButtonNext.Text = "Next (Ctrl + N)"
-        ButtonNext.UseVisualStyleBackColor = True
+        ButtonNext.UseVisualStyleBackColor = False
+        ' 
+        ' ButtonDelete
+        ' 
+        ButtonDelete.BackColor = Color.Chocolate
+        ButtonDelete.Location = New Point(288, 384)
+        ButtonDelete.Name = "ButtonDelete"
+        ButtonDelete.Size = New Size(165, 34)
+        ButtonDelete.TabIndex = 13
+        ButtonDelete.Text = "Delete (Ctrl + D)"
+        ButtonDelete.UseVisualStyleBackColor = False
         ' 
         ' ViewSubmissionsForm
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(ButtonDelete)
         Controls.Add(ButtonNext)
         Controls.Add(ButtonPrevious)
         Controls.Add(TextBoxStopwatch)
@@ -186,4 +200,5 @@ Partial Class ViewSubmissionsForm
     Friend WithEvents TextBoxStopwatch As TextBox
     Friend WithEvents ButtonPrevious As Button
     Friend WithEvents ButtonNext As Button
+    Friend WithEvents ButtonDelete As Button
 End Class

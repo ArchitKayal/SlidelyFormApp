@@ -49,6 +49,7 @@ Public Class CreateSubmissionForm
                 Dim response As HttpResponseMessage = Await client.PostAsync("http://localhost:3000/submit", content)
                 If response.IsSuccessStatusCode Then
                     MessageBox.Show("Submission successful!")
+                    Me.Close()  ' Close the form after successful submission
                 Else
                     Dim errorMsg As String = Await response.Content.ReadAsStringAsync()
                     MessageBox.Show("Submission failed. " & errorMsg)
@@ -74,6 +75,13 @@ Public Class CreateSubmissionForm
             ButtonSubmit.PerformClick()
         ElseIf e.Control AndAlso e.KeyCode = Keys.T Then
             ToggleStopwatch()
+        End If
+    End Sub
+
+    Private Sub CreateSubmissionForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Dim mainForm As Form1 = DirectCast(Application.OpenForms("Form1"), Form1)
+        If mainForm IsNot Nothing Then
+            mainForm.Show()
         End If
     End Sub
 End Class

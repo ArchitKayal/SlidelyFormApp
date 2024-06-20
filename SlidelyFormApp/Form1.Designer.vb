@@ -29,21 +29,23 @@ Partial Class Form1
         ' 
         ' ButtonViewSubmissions
         ' 
+        ButtonViewSubmissions.BackColor = Color.Khaki
         ButtonViewSubmissions.Location = New Point(254, 184)
         ButtonViewSubmissions.Name = "ButtonViewSubmissions"
         ButtonViewSubmissions.Size = New Size(303, 34)
         ButtonViewSubmissions.TabIndex = 0
         ButtonViewSubmissions.Text = "View Submissions (Ctrl + V)"
-        ButtonViewSubmissions.UseVisualStyleBackColor = True
+        ButtonViewSubmissions.UseVisualStyleBackColor = False
         ' 
         ' ButtonNewSubmissions
         ' 
+        ButtonNewSubmissions.BackColor = Color.PaleTurquoise
         ButtonNewSubmissions.Location = New Point(254, 242)
         ButtonNewSubmissions.Name = "ButtonNewSubmissions"
         ButtonNewSubmissions.Size = New Size(303, 34)
         ButtonNewSubmissions.TabIndex = 1
         ButtonNewSubmissions.Text = "Create New Submission (Ctrl + N)"
-        ButtonNewSubmissions.UseVisualStyleBackColor = True
+        ButtonNewSubmissions.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 

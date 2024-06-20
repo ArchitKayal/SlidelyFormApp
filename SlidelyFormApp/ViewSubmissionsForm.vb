@@ -61,6 +61,7 @@ Public Class ViewSubmissionsForm
     Private Sub UpdateButtons()
         ButtonPrevious.Enabled = currentIndex > 0
         ButtonNext.Enabled = currentIndex < totalSubmissions - 1
+        ButtonDelete.Enabled = totalSubmissions > 0
     End Sub
 
     Private Async Sub ButtonPrevious_Click(sender As Object, e As EventArgs) Handles ButtonPrevious.Click
@@ -75,6 +76,37 @@ Public Class ViewSubmissionsForm
             currentIndex += 1
             Await FetchAndDisplaySubmission(currentIndex)
         End If
+    End Sub
+
+    Private Async Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
+        Using client As New HttpClient()
+            Try
+                Dim response As HttpResponseMessage = Await client.DeleteAsync($"http://localhost:3000/delete?index={currentIndex}")
+                If response.IsSuccessStatusCode Then
+                    MessageBox.Show("Submission deleted successfully!")
+                    ' Refresh submissions
+                    Await FetchTotalSubmissions()
+                    If totalSubmissions > 0 Then
+                        If currentIndex >= totalSubmissions Then
+                            currentIndex = totalSubmissions - 1
+                        End If
+                        Await FetchAndDisplaySubmission(currentIndex)
+                    Else
+                        ' Clear form if no submissions left
+                        TextBoxName.Clear()
+                        TextBoxEmail.Clear()
+                        TextBoxPhoneNum.Clear()
+                        TextBoxGitHub.Clear()
+                        TextBoxStopwatch.Clear()
+                        UpdateButtons()
+                    End If
+                Else
+                    MessageBox.Show("Failed to delete submission.")
+                End If
+            Catch ex As Exception
+                MessageBox.Show("An error occurred: " & ex.Message)
+            End Try
+        End Using
     End Sub
 
     Private Sub ViewSubmissionsForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown

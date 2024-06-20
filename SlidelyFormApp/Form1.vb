@@ -14,13 +14,19 @@
 
     Private Sub ButtonViewSubmissions_Click(sender As Object, e As EventArgs) Handles ButtonViewSubmissions.Click
         Dim viewForm As New ViewSubmissionsForm()
+        AddHandler viewForm.FormClosed, AddressOf ChildFormClosed
         viewForm.Show()
         Me.Hide()
     End Sub
 
     Private Sub ButtonNewSubmissions_Click(sender As Object, e As EventArgs) Handles ButtonNewSubmissions.Click
         Dim createForm As New CreateSubmissionForm()
+        AddHandler createForm.FormClosed, AddressOf ChildFormClosed
         createForm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub ChildFormClosed(sender As Object, e As FormClosedEventArgs)
+        Me.Show()
     End Sub
 End Class
