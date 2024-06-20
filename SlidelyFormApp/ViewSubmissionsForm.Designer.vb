@@ -133,7 +133,7 @@ Partial Class ViewSubmissionsForm
         ' 
         ' ButtonPrevious
         ' 
-        ButtonPrevious.Location = New Point(203, 363)
+        ButtonPrevious.Location = New Point(203, 340)
         ButtonPrevious.Name = "ButtonPrevious"
         ButtonPrevious.Size = New Size(163, 34)
         ButtonPrevious.TabIndex = 11
@@ -142,7 +142,7 @@ Partial Class ViewSubmissionsForm
         ' 
         ' ButtonNext
         ' 
-        ButtonNext.Location = New Point(389, 363)
+        ButtonNext.Location = New Point(389, 340)
         ButtonNext.Name = "ButtonNext"
         ButtonNext.Size = New Size(150, 34)
         ButtonNext.TabIndex = 12

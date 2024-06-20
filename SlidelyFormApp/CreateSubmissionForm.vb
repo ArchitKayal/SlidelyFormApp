@@ -12,10 +12,6 @@ Public Class CreateSubmissionForm
         Me.KeyPreview = True
     End Sub
 
-    Private Sub CreateSubmissionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.KeyPreview = True
-    End Sub
-
     Private Sub ButtonStopwatch_Click(sender As Object, e As EventArgs) Handles ButtonStopwatch.Click
         ToggleStopwatch()
     End Sub
@@ -26,6 +22,10 @@ Public Class CreateSubmissionForm
     End Sub
 
     Private Async Sub ButtonSubmit_Click(sender As Object, e As EventArgs) Handles ButtonSubmit.Click
+        Await SubmitFormAsync()
+    End Sub
+
+    Private Async Function SubmitFormAsync() As Task
         Dim name As String = TextBoxName.Text
         Dim email As String = TextBoxEmail.Text
         Dim phone As String = TextBoxPhoneNum.Text
@@ -45,17 +45,19 @@ Public Class CreateSubmissionForm
 
         Using client As New HttpClient()
             Try
+                Console.WriteLine("Submitting data to the backend")
                 Dim response As HttpResponseMessage = Await client.PostAsync("http://localhost:3000/submit", content)
                 If response.IsSuccessStatusCode Then
                     MessageBox.Show("Submission successful!")
                 Else
-                    MessageBox.Show("Submission failed.")
+                    Dim errorMsg As String = Await response.Content.ReadAsStringAsync()
+                    MessageBox.Show("Submission failed. " & errorMsg)
                 End If
             Catch ex As Exception
                 MessageBox.Show("An error occurred: " & ex.Message)
             End Try
         End Using
-    End Sub
+    End Function
 
     Private Sub ToggleStopwatch()
         If stopwatchRunning Then
